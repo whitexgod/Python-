@@ -2,11 +2,11 @@
 4
 1*2*3*4*17*18*19*20
 
- 5*6*7*14*15*16
+  5*6*7*14*15*16
 
-  8*9*12*13
+    8*9*12*13
 
-   10*11
+      10*11
 """
 n=int(input())
 end_no=(n*n)+n
@@ -16,7 +16,7 @@ carry=0
 eleminate=temp-1
 for i in range(n):
     for k in range(i):
-        print(" ",end="")
+        print("  ",end="")
     for j in range(i*2,n*2):
         if j<((i*2)+temp):
             print(str(start_no)+"*",end="")
@@ -25,9 +25,6 @@ for i in range(n):
             if j==(n*2)-1:
                 print(str(end_no-eleminate), end="")
                 eleminate = eleminate - 1
-            elif j==(i*2)+temp:
-                print(str(end_no-eleminate)+"*", end="")
-                eleminate=eleminate-1
             else:
                 print(str(end_no-eleminate)+"*",end="")
                 eleminate = eleminate - 1
